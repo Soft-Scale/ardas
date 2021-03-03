@@ -11,12 +11,8 @@ const autoprefixer = require("autoprefixer");
 const postcss = require('postcss');
 
 module.exports = merge(common, {
-  context: path.resolve(__dirname, 'src'),
   mode: "production",
-  output: {
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+  target: 'web',
   optimization: {
     minimizer: [
       new TerserPlugin(),
