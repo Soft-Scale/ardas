@@ -1,4 +1,5 @@
 import bar from './js/bar.js';
+import calculate from './js/calculate.js';
 import "./styles/main.scss";
 // import fontRoboto from './fonts/AkayaTelivigala-Regular.ttf'
 // import fontRoboto1 from './fonts/Roboto/RobotoCondensed-Bold.ttf'
