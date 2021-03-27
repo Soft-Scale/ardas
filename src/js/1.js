@@ -6,8 +6,8 @@
 
 export function calcYears(year) {
 
-  let startYear = prompt('Введите начальный год')
-  let endYear = prompt('Введите конечный год')
+  let startYear = +prompt('Введите начальный год')
+  let endYear = +prompt('Введите конечный год')
 
   if((isNaN(startYear) || startYear === null || startYear === '') && (isNaN(endYear) || endYear === null || endYear === '')){
     console.log(startYear = 2021);

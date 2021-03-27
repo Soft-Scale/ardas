@@ -4,19 +4,21 @@
 Вам може знадобитися Math.random().
 */
 
-export function randomInteger(min, max) {
+export function randomInteger() {
   let filterArr = [];
   let even = 0;
   let odd = 0;
+  let count = 0;
 
-  for (let i = 0; i <= max; i++) {
-    let rand = Math.floor(Math.random() * (max - min + 1)) + min;
+  do{
+    count++;
+    let rand = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
     filterArr.push(rand);
-    filterArr = filterArr.filter((item, index) =>  filterArr.indexOf(item) == index);
-    filterArr.sort((a, b) => a - b)
-  }
+    // !filterArr.includes(rand)
+  }while (count < 50);
+  filterArr = filterArr.filter((item, index) => filterArr.indexOf(item) == index)
+  filterArr.sort((a, b) => a - b)
   
-  filterArr.length = 50;
 
   /*
   Використовуючи масив з попереднього завдання порахувати 
@@ -36,6 +38,3 @@ export function randomInteger(min, max) {
 
   return filterArr;
 }
-
-// randomInteger(0, 100);
-

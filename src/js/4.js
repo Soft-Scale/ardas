@@ -22,18 +22,12 @@ let users = [
     name: 'Ilya'
   },
 ];
-// let resultUsers = users.reduce(function(accumulator, current, i){
-//   accumulator[i] = current.id;
-//   accumulator[i] = current.name;
-//   return accumulator;
-// }, {})
 
 export function converToObj(){
-  let resultUsers = users.reduce(function(accumulator, current, i){
-    accumulator[i] = current.id;
-    accumulator[i] = current.name;
+  let resultUsers = users.reduce(function(accumulator, current){
+    accumulator[current.id] = current;
     return accumulator;
   }, {})
+  
   console.log(resultUsers)
 }
-// converToObj()
