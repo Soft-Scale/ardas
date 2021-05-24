@@ -1,38 +1,78 @@
 @import "fonts.scss";
 
-$color: rgb(255, 125, 125);
-
+html{
+  height: 100%;
+}
 body{
-  background: $color;
+  background: #fff;
+  height: 100%;
+  
 }
 .wrapper{
   padding: 20px 50px;
   max-width: 700px;
+  min-height: 500px;
+  display: flex;
 }
-.title{
-  color: rgb(255, 255, 255);
-  font-family: 'Roboto Condensed', sans-serif;
+.column{
+  width: 33%;
+  border: 1px solid #cdcdcd;
 }
-p{
-  font-family: 'Oi', cursive;
+.column-header{
+  padding: 20px 10px;
+  border-bottom: 1px solid #cdcdcd;
+  display: flex;
+  justify-content: space-between;
 }
-span{
-  font-family: 'Oi', cursive;
-  font-size: 20px;
-  display: block;
+.column-content{
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 500px;
 }
-img{
-  max-width: 200px;
+.card{
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cdcdcd;
 }
-/* cat class*/
-.cat{
-  background: url("./assets/images/cat.jpg") ;
-  background-size: cover;
-  width: 400px;
-  height: 300px;
+.card-header{
+  padding: 5px;
+  background: rgb(114, 145, 230);
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
-/* list class*/
-.list a{
-  color: rgb(255, 255, 255);
-  transform: scale(0.5);
+.card-content{
+  padding: 5px;
+  border: 1px solid #cdcdcd;
 }
+.btn-remove{
+  position: absolute;
+  right: 5px;top: 2px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+
+  &:hover{
+    opacity: 1;
+  }
+  &:before, &:after{
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 24px;
+    width: 2px;
+    background-color: #333;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+}
+
+
