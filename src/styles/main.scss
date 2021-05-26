@@ -4,19 +4,33 @@ html{
   height: 100%;
 }
 body{
-  background: #fff;
+  background: #838c91;
   height: 100%;
   
 }
 .wrapper{
   padding: 20px 50px;
-  max-width: 700px;
   min-height: 500px;
   display: flex;
 }
+.btn-add-column{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 42px;
+  background: rgba(0,0,0,.3);
+  cursor: pointer;
+  margin-right: 20px;
+  transition: .3s;
+
+  &:hover{
+    opacity: 0.8;
+  }
+}
 .column{
-  width: 33%;
-  border: 1px solid #cdcdcd;
+  width: 250px;
+  margin-right: 20px;
+  background: #ebecf0;
 }
 .column-header{
   padding: 20px 10px;
