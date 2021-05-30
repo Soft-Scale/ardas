@@ -19,6 +19,8 @@ function createCard() {
 }
 // createCard()
 
+/* -------------------- Все что выше можно коментировать--------------------- */
+
 
 const cards = [
   {
@@ -33,23 +35,29 @@ const cards = [
   },
 ];
 function getCards(arr){
-  // let count = 0;
   let target = document.querySelector(".column");
 
 
   for (let i = 0; i < arr.length; i++) {
     let card = document.createElement("div");
-    card.classList.add('card')
     const element = arr[i];
+
+    card.classList.add('card')
     card.innerHTML = `${element.title}`
-    card.dataset.column = `${element.column}`
-    card.setAttribute('id', `card-${element.id}`)
+    card.dataset.card = `${element.column}`
+    card.dataset.columnId = `${element.id}`
     target.append(card);
-    console.log(element);
+    // console.log(element);
   }
   return arr;
 }
+let currentElement = document.querySelectorAll('.column');
+for (let i = 0; i < currentElement.length; ++i) {
+  console.log(currentElement[i]);
+  // currentElement[i].style.color = "green";
+}
+// console.log(currentElement);
 getCards(cards)
 
 
-export { createCard, getCards };
+export { createCard, getCards};

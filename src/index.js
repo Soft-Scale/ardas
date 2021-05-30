@@ -1,3 +1,3 @@
-import { addColumn } from './js/columns.js';
+import './js/board';
 import "./styles/main.scss";
 
