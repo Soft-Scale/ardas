@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "autoprefixer": "^10.2.4"
+    "autoprefixer": "^10.2.4",
+    "jshint": "^2.13.0"
   }
 }
