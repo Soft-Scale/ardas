@@ -13,13 +13,12 @@ export const columns = [
   }
 ];
 
-export const renderColumns = col =>{  
-  let wrapper = document.querySelector('.wrapper');
+export const renderColumns = col =>{
   let columnEl = document.createElement('div');
   
-  columnEl.dataset.columnId = col.id;
+  columnEl.dataset.column = col.id;
   columnEl.innerText = col.title;
   columnEl.classList.add('column');
-  wrapper.append(columnEl);
+  // wrapper.append(columnEl);
   return columnEl;
 }
