@@ -16,21 +16,25 @@ export const cards = [
   },
   {
     id: 2,
-    title: 'Новый урок по JS',
+    title: 'Урок 3 по JS',
     column: 8,
+  },
+  {
+    id: 2,
+    title: 'Урок 4 по JS',
+    column: 5,
   },
 ];
 
 
 export const renderCard = card => {
-  let res = document.querySelector('.column');
   let cardEl = document.createElement('div');
-  cardEl.dataset.columnId = card.id;
+
+  cardEl.dataset.card = card.id;
   cardEl.dataset.column = card.column;
   cardEl.innerText = card.title;
   cardEl.classList.add('card');
-  // res.append(cardEl);
-  // console.log(cardEl);
+
   return cardEl;
   
 }

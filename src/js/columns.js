@@ -19,6 +19,6 @@ export const renderColumns = col =>{
   columnEl.dataset.column = col.id;
   columnEl.innerText = col.title;
   columnEl.classList.add('column');
-  // wrapper.append(columnEl);
+  
   return columnEl;
 }
