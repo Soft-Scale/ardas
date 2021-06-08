@@ -35,6 +35,5 @@ export const renderCard = card => {
   cardEl.innerText = card.title;
   cardEl.classList.add('card');
 
-  return cardEl;
-  
+  return cardEl;  
 }
